@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp">
+                <TextView
+                    android:id="@+id/txvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Test"
+                    style="@style/Base.TextAppearance.AppCompat.Title"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/txvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ajhdjkf jhsfkjshdfkj hjkshdfkjsh jshfkjshf kjshdf"
+                    tools:ignore="HardcodedText"/>
+            </LinearLayout>
+
+            <include layout="@layout/horizontal_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/marktet"
+                    style="@style/Base.TextAppearance.AppCompat.Body2"/>
+                <TextView
+                    android:id="@+id/txvMarket"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Telemarketing"
+                    tools:ignore="HardcodedText" />
+                <include layout="@layout/horizontal_line" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/technologies"
+                    style="@style/Base.TextAppearance.AppCompat.Body2"/>
+                <TextView
+                    android:id="@+id/txvTechnologies"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Java, Android"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
