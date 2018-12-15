@@ -61,4 +61,9 @@ public class Product {
                 ", stack=" + Arrays.toString(stack) +
                 '}';
     }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return new Product(productName, description, Arrays.copyOf(targetMarket, targetMarket.length), Arrays.copyOf(stack,stack.length));
+    }
 }

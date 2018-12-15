@@ -12,11 +12,13 @@ import com.codetouch.filtrodeprodutos.R;
 import com.codetouch.filtrodeprodutos.Utilities;
 import com.codetouch.filtrodeprodutos.models.Product;
 
+import java.util.List;
+
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHolder> {
 
-    private Product[] products;
+    private List<Product> products;
 
-    public ProductAdapter(Product[] products){
+    public ProductAdapter(List<Product> products){
         this.products = products;
     }
 
@@ -29,7 +31,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Product product = products[position];
+        Product product = products.get(position);
         holder.txvName.setText(product.getProductName());
         holder.txvDescription.setText(product.getDescription());
         holder.txvMarket.setText(TextUtils.join(", ", product.getTargetMarket()));
@@ -38,7 +40,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
     @Override
     public int getItemCount() {
-        return products.length;
+        return products.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
